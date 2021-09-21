@@ -63,7 +63,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Bean
 	public ApplicationRunner initializeUser(PasswordEncoder passEncoder) {
 		
-		final User defaultUser = new User("admin",passEncoder.encode("password"));
+		final User defaultUser = new User("test",passEncoder.encode("pwd123"));
  
 
 		return args -> userService.save(defaultUser); 
